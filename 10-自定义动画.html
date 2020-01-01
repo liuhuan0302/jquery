@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        section{
+            width:300px;
+            height:200px;
+            background:green;
+            margin-top:30px;
+            position:absolute;
+        }
+    </style>
+</head>
+<body>
+    <button>CHANGE</button>
+    <section></section>
+    <script src="./jquery-1.11.3.min.js"></script>
+    <script>
+        $('button').click(function(){
+            $('section').animate({
+                'width':'600px',
+                'height' : '500px'
+            },800).animate({
+                'width' :'100px',
+                'height' :'100px',
+            })
+        })
+
+        $('button').click(function(){
+            $('section').animate({
+                'width':'600px',
+                'height' : '500px',
+                'left' :'80px'
+            },800,function(){
+                alert(1);
+            })
+        })
+
+
+
+        /*
+            什么情况下用连缀的写法 ： 动画执行的dom是同一个的时候
+            什么情况下用回调的写法 ： 执行的动画不是同一个节点的时候/。
+        */
+    </script>
+</body>
+</html>

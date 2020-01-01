@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+<body>
+    <section class="box">
+        <span>span</span>
+    </section>
+    <div id="wrap">wrap</div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script src="./jquery-1.11.3.min.js"></script>
+    <script>
+        let obox = $(".box");
+        obox.html('<span>你好</span>')
+        obox.text('<span>你好</span>')
+        console.log(obox.html());
+        let wrap = $('#wrap');
+        console.log(wrap.text());
+        let aLi = $('li');
+        console.log(aLi)
+        aLi.click(function(){
+            console.log($(this).index());//$(this)返回的是一个jquery 对象,可以应用jquery方法
+            console.log(this);//打印的是点击的标签   <li>1</li>
+        })
+        // aLi.mousemove(function(){
+        //     console.log($(this));
+        // })
+        /*
+        预处理函数:
+        $(document).ready(function(){})
+        $(function(){})
+
+        类似于原生js中的:
+        window.onload = function(){}
+
+        面试题:
+            window.onload 和 $(document).ready(function(){}) 有什么区别?
+
+            1:前者是原生js 中的方法
+            后者是jquery 中的方法
+            2.window.onload 等待的资源 包括html css 图片......
+            $(document).ready(function(){})   等待加载的资源不包括图片
+        
+        */
+       /*
+       jquery的基本操作:
+        1.基本的选择器
+            class : $('.box')
+            id :$('#box')
+            tag : $('div')
+            * 获取所有的元素节点
+
+                注: $('选择器') 获取的是jquery对象,只有返回的是jquery对象.才能调用jquery 方法
+        2.绑定事件
+            a: jquery中给节点绑定事件不需要你遍历
+                dom节点.事件(function(){执行的方法}})
+            b: 获取节点的下标 
+                index();
+            c : jquery 里面的this用法:
+                $(this)(只有在应用jquery方法时,在需要获取$(this),返回的是一个jquery对象)
+        3.jquery 添加css样式
+        .css() 
+            常用的写法 ：一个 或者 两个    一个的时候 是一个对象   两个的时候：第一个参数位属性。第二个参数位值
+                obox.css(
+                    {
+                        'width' : '300px',
+                        'height': '200px',
+                        'background' : 'red',
+                    }
+                )
+                wrap.css('background','blue')
+        .html()   设置或者获取dom节点的内容
+                设置:obox.html('<span>你好</span>')//会解析span标签,在页面中只显示你好
+                获取.obox.html();
+        .text()
+                设置:obox.text('<span>你好</span>')//不会解析span 标签
+       */
+        obox.css(
+            {
+                'width' : '300px',
+                'height': '200px',
+                'background' : 'red',
+            }
+        )
+        wrap.css('background','blue')
+    </script>
+</body>
+</html>

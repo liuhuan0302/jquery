@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li class="special">3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+<!-- <section>
+    <div></div>
+</section> -->
+<body>
+    <script src="./jquery-1.11.3.min.js"></script>
+    <script>
+        
+        
+        // $('div').prepend('<h2>替换</h2>')
+        // $('div').after('<h3>替换<h3>')
+        // $('div').replaceWith('<h3>替换<h3>')
+        
+     
+        $('ul').click(function(){
+            $(this).css('background','red');
+        })
+        $('ul').clone(true).appendTo('body');  
+           
+       
+        
+    /*
+    内部插入
+        append(content|fn) 在元素内部添某项内容 添加在元素下面
+            //$('section').append('<p>替换</p>');
+        appendTo(content) 将某项内容添加到元素内部
+            //$('<p>替换<p>').appendTo($('section'));
+        prepend(content|fn)   添加在元素上面
+            //$('section').prepend('<p>替换</p>');
+        prependTo(content) 
+    外部插入    (在元素外部添加)
+        after(content|fn)   在元素之后
+        before(content|fn)  在元素之前添加
+            // $('div').before('<h3>替换<h3>')
+        insertAfter(content)  把内容添加在元素之后
+            //$('<p>添加<p>').insertAfter('div');
+        insertBefore(content) 
+    包裹
+        wrap(html|ele|fn) 
+        unwrap() 
+        wrapall(html|ele) 
+        wrapInner(html|ele|fn) 
+    替换
+        replaceWith(content|fn) 把谁替换掉
+            //$('div').replaceWith('<h3>替换<h3>')
+        replaceAll(selector) 用谁替换谁`
+            // $('<h2>替换<h2>').replaceAll('div');
+    删除
+        empty()  清除内容
+            // $('.special').empty();
+        remove([expr]) 删除节点
+            // $('.special').remove();
+        detach([expr]) 指定删除
+            //$('li').detach('.special');
+    复制
+        clone([Even[,deepEven]]) 
+            //$('ul').clone().appendTo('body');只能克隆节点
+            //$('ul').clone(true).appendTo('body');  //会克隆方法
+        
+
+    
+    */
+    </script>
+</body>
+</html>

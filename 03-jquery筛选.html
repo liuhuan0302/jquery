@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li class="special">3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+
+    <!-- <section class='del'>
+        <p class="p"></p>
+    </section>
+
+    <section></section> -->
+    <script src="./jquery-1.11.3.min.js"></script>
+    <script>
+    $('li').not($('.special')).css('background','red');
+    // console.log($('li').hasClass('special'))
+
+    // $('ul').children().eq(1).css('background','red')
+    // $('.special').siblings().css('background','red')
+    
+    /*
+    筛选:
+        eq(index|-index) 
+            // $('li').eq(2).css('background','red');
+        first() 
+            //$('li').first().css('background','red');
+        last() 
+        hasClass(class) //判断是否包含这个属性
+            //console.log($('li').hasClass('special'))  //true
+        filter(expr|obj|ele|fn) 
+        is(expr|obj|ele|fn)1.6* 
+        map(callback) 
+        has(expr|ele) 保留包含特定后代的元素，去掉那些不含有指定后代的元素。
+            //$('section').has('p').css('background','red'); //给含有p标签的section添加背景颜色
+
+        not(expr|ele|fn) .not()里面的参数 接收的是 $()  或者一个选择符的字符串
+            //$('section').not($('.del')).css('background','red');排除del类的标签(给除它之外的添加css样式)
+            //$('section').not('.del').css('background','red');排除del类的标签(给除它之外的添加css样式)
+        slice(start,[end])
+
+
+        查找:
+            children([expr]) 查找父元素下的子元素
+                //$('ul').children().eq(1).css('background','red') 
+            find(e|o|e)1.6*  查找父元素下的子元素(find需要传参)
+                //$('ul').find('li').css('background','red')
+            next([expr]) 选取元素的下一个
+                // $('.special').next().css('background','red')
+            nextAll([expr]) 选取元素下面的所有
+            parent([expr]) 父元素
+            parents([expr]) 父元素及父元素的父元素
+            parentsUntil([e|e][,f])1.6* 
+            prev([expr]) 
+            prevall([expr]) 
+            siblings([expr]) 除他自身以外的元素 
+                //$('.special').siblings().css('background','red')
+            
+    */
+        
+    </script>
+</body>
+</html>

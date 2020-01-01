@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        section{
+            width:300px;
+            height:300px;
+            background:orange;
+        }
+    </style>
+</head>
+<body>
+    <button>切换</button>
+    <section></section>
+    <script src="./jquery-1.11.3.min.js"></script>
+    <script>
+        $('button').click(function(){
+            $('section').stop(true).delay(2000).slideToggle(1000);
+        })
+
+
+
+        /*
+            stop(true) :清除上一次的动作(清除动画队列)(放在动画之前)
+            stop(true,true) 上次动画瞬间执行完毕
+
+            delay(时间):延长多长时间执行
+        */
+    </script>
+</body>
+</html>

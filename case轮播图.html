@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    section{
+        width:1000px;
+        height:350px;
+        margin:50px auto;
+        background:orange;
+        position: relative;
+    }
+    section span{
+        display:block;
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+        background:rgba(200,0,0,0.8);
+        text-align:center;
+        line-height:50px;
+        font-size:40px;
+        font-weight: 900;
+        color:#fff;
+        position: absolute;
+        top:150px;
+        z-index:1px;
+        cursor: pointer;
+    }
+    section span:nth-of-type(1){
+        left:20px;
+    }
+    section span:nth-of-type(2){
+        right:20px;
+    }
+    .imgBox{
+        height:350px;
+        position:absolute;
+    }
+    .imgBox img{
+        display:block;
+        width:1000px;
+        height:350px;
+        float:left;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="imgBox">
+            <img src="./img/1.jpg" alt="">
+            <img src="./img/2.jpg" alt="">
+            <img src="./img/3.jpg" alt="">
+            <img src="./img/4.jpg" alt="">
+            <img src="./img/5.jpg" alt="">
+        </div>
+        <span><</span>
+        <span>></span>
+    </section>
+    <script src="./jquery-1.11.3.min.js"></script>
+    <!-- 引入动画效果easing -->
+    <script src="https://cdn.bootcss.com/jquery-easing/1.4.0/jquery.easing.min.js"></script>
+    <script>
+    class Banner{
+        constructor(){
+            this.aImg = $('.imgBox img');
+            this.oImgBox = $('.imgBox');
+            this.aBtn = $('span');
+            //速度 width() 计算元素的宽度
+            this.distance = this.aImg.eq(0).width();
+            this.count = 0;
+           
+            this.init();
+        }
+        init(){
+            //获取oImgBox 的宽度
+            this.oImgBox.css('width',this.aImg.length * this.distance + 'px');
+            this.eventBind();
+           
+        }
+        //aImgBox的移动
+        imgMove(){
+            this.oImgBox.stop(true).animate({
+                'left' : -this.distance * this.count
+            },{//引入动画效果
+                easing :'easeInElastic',
+                duration : 2000
+            })
+        }
+        //下一张
+        nextImg(){
+            if(this.count >= this.aImg.length - 1){
+                this.count = 0;
+            }else{
+                this.count++;
+            }
+            this.imgMove();
+        }
+        //上一张
+        preImg(){
+            if(this.count <= 0){
+                this.count = this.aImg.length - 1;
+            }else{
+                this.count--;
+            }
+            this.imgMove();
+        }
+        //事件绑定
+        eventBind(){
+            this.aBtn.eq(1).on('click',$.proxy(this.nextImg,this));
+            this.aBtn.eq(0).on('click',$.proxy(this.preImg,this));
+        }
+
+    }
+    new Banner();
+
+    /*
+    $.proxy();
+        两个参数:
+            1:代理的方法
+            2:this指向
+    
+    
+    */
+    
+    </script>
+</body>
+</html>

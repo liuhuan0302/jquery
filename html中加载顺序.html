@@ -1,0 +1,19 @@
+bn 08:53:41
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+    	// 这个代码执行的时候，body 还没有加载
+      // 这个时候我们就获取不到 body 中的那个 div
+      
+      // 就需要使用 window.onload 事件
+      window.onload = function () {
+        // 这个函数会在页面加载完毕以后在执行
+        // 那么这个时候页面的 DOM 元素都已经加载了，我们就可以获取 div 了
+      }
+    </script>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

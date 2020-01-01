@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    section{
+        height:400px;
+        width:400px;
+    }
+    .box{
+        background: orange;
+    }
+    </style>
+</head>
+<body>
+        <!-- <img src="1.jpg" alt="">
+        <input type="checkbox"> -->
+        <button>切换样式</button>
+        <section></section>
+    <script src="./jquery-1.11.3.min.js"></script>
+    <script>
+     /*
+            属性
+                attr(name|pro|key,val|fn) 修改属性
+                    //$('img').attr('src','images/2.jpg'); 
+                removeAttr(name) 移除某个属性
+                    //$('img').removeAttr('alt'); 
+                prop(n|p|k,v|f)1.6+ 动态选择表单
+                    $(':checkbox').prop('checked',true) //默认选择状态
+            CSS 类
+                addClass(class|fn) 添加类名
+                    //$('section').addClass('box');
+                removeClass([class|fn]) 移除类名
+                    // $('section').removeClass('box');
+                toggleClass(class|fn[,sw]) 动态切换类名
+                   var btn = $('button');
+                        btn.click(function(){
+                            $('section').toggleClass('box');
+                        })   
+
+
+            HTML代码/文本/值
+                html([val|fn]) 
+                text([val|fn]) 
+                val([val|fn|arr]) 
+        */
+      
+        // $('img').attr('src','images/2.jpg'); 
+        // $('section').addClass('box');
+        // $('section').addClass('wrap');
+        // $('section').removeClass('box');
+        var btn = $('button');
+        btn.click(function(){
+            $('section').toggleClass('box');
+        })
+
+        
+    </script>
+</body>
+</html>

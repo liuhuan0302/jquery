@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* section{
+        width:400px;
+        height:400px;
+        background:red;
+    }
+    div{
+        height:200px;
+        width:200px;
+    } */
+    </style>
+</head>
+<body>
+    <!-- <section>
+        <div>
+            <div></div>
+        </div>
+    </section>
+    <h2>aaaa</h2>
+    <h2>bbbb</h2>
+    <h2>cccc</h2> -->
+    <!-- <ul>
+        <li>1</li>
+        <li>2</li>
+        <li class='special'>3</li>
+        <li></li>
+        <li>5</li>
+    </ul>
+    <h1>h1</h1>
+    <h3>h3</h3>
+    <input type="text" autofocus> -->
+    <!-- <section>
+        section
+        <div>div</div>
+    </section><section> -->
+        <section title="第一个类">1</section>
+        <section title="第二个类">2</section>
+        <section>3</section>
+        <section>4</section>
+        <section>5</section>
+        <input type="text">
+        <input disabled type="password">
+        <input type="text">
+        <input type="radio"><label for="">男</label>
+        <input type="file">
+
+    </section>
+    <script src="./jquery-1.11.3.min.js"></script>
+    <script>
+       
+       
+       
+        // $('li:not(.special)').css('background','orange')
+        
+        
+        $('input:enabled').css('background','orange')
+       
+        
+       
+       
+        /*
+        层级
+            ancestor descendant  通过父元素找子元素(所有子级)
+            parent > child 通过父元素找子元素(找相近的子元素,不包括孙子辈的子元素)
+            prev + next (最近的同级元素)
+            prev ~ siblings (所有的同级元素)
+                //$('section ~ h2').css('background','yellow');
+
+        基本(伪类)
+            :first 
+                // $('li:first').css('background','orange')
+            :last 
+                // $('li:last').css('background','orange')
+            :not(selector) 除他以外的元素 
+                // $('li:not(.special)').css('background','orange')
+            :even  偶数元素
+                // $('li:even').css('background','orange')
+            :odd   奇数元素
+                // $('li:odd').css('background','orange')
+            :eq(index) 通过下标选择集合中的某一个元素,下标从0开始 
+                //$('li:eq(0)').css('background','orange')
+                // $('li').eq(3).css('background','orange')
+            :gt(index)  下标大于index(下标从0开始)
+                // $('li:gt(3)').css('background','orange')
+            :lt(index)  下标小于index的元素(下标从0开始)
+                // $('li:lt(2)').css('background','orange')
+            :header     选择标题标签
+                // $(':header').css('background','orange')
+            :focus    聚焦
+                //autofocus自动获取焦点
+                 $(':focus').css('background','orange'); input 聚焦时改变颜色
+
+             注:区分 $('li').eq(3).css('background','orange') eq 筛选方法(下标从1开始)
+
+
+
+        内容  ( 根据内容对节点选取 )
+            :contains(text) //对包含text内容的节点进行选取
+                //$('li:contains(1)').css('background','orange') 
+            :empty     选择内容为空的节点
+                //$('li:empty').css('background','orange')
+            :has(selector)      查找一个包含selector的元素
+                // $('section:has(div)').css('background','orange') 对包含div的元素进行获取
+            :parent    有内容的元素
+                //$('section:parent').css('background','orange') 对有内容的选取
+
+
+
+
+        通过属性（html属性）选取元素
+            [attribute]
+                //$('section[title]').css('background','orange')对包含这种属性的元素进行选取 
+            [attribute=value] 
+                //$('section[title="第一个类"]').css('background','orange')
+            [attribute!=value]
+                //$('section[title!="第一个类"]').css('background','orange') 
+            [attribute^=value]  属性值是以某些值开头
+                // $('section[title^="第一个类"]').css('background','orange')
+            [attribute$=value] 属性值是以某些值结尾 
+            [attribute*=value]  匹配给定的属性是以包含某些值的元素
+            [attrSel1][attrSel2][attrSelN] 复合属性选择器，需要同时满足多个条件时使用。
+
+
+
+        子元素
+            :nth-child 
+            :first-child 
+            :last-child 
+            :only-child 
+
+        表单
+            :input 
+            :text 
+            :password 
+            :radio 单选框不能自己改变样式,必须通过相邻元素来改变
+                // $(':radio + label').css('background','orange')
+            :checkbox 
+            :submit 
+            :image 
+            :reset 重置按钮
+            :button 
+            :file 
+            :hidden 
+
+        表单对象属性
+            :enabled 
+                //$('input:enabled').css('background','orange')
+            :disabled 
+            :checked 
+            :selected 
+        
+        */
+
+
+    </script>
+</body>
+</html>
